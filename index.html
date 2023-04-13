@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Boring UI</title>
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to</h1>
+			<h1>Boring<span>UI</span></h1>
+		</header>
+		<span class="sectionHeader">
+			<h2>Buttons</h2>
+		</span>
+
+		<span>
+			<h4>Standard</h4>
+		</span>
+		<section id="buttonDisplay">
+			<boring-button type="default">Default Button</boring-button>
+			<boring-button type="ghost">Ghost Button</boring-button>
+			<boring-button type="secondary">Outline Button</boring-button>
+			<boring-button type="default" disabled
+				>Disabled Default</boring-button
+			>
+			<boring-button type="ghost" disabled>Disabled Ghost</boring-button>
+			<boring-button type="secondary" disabled
+				>Disabled Outline</boring-button
+			>
+		</section>
+
+		<span>
+			<h4>Toggle</h4>
+		</span>
+		<section id="toggleDisplay">
+			<boring-toggle checked>Toggle Me</boring-toggle>
+			<boring-toggle>Unchecked</boring-toggle>
+			<boring-switch></boring-switch>
+			<boring-switch checked></boring-switch>
+		</section>
+
+		<span>
+			<h4>Toggle Groups</h4>
+		</span>
+		<section id="toggleDisplay">
+			<boring-toggle-group type="accent">
+				<boring-toggle-item>Button</boring-toggle-item>
+				<boring-toggle-item>Button</boring-toggle-item>
+				<boring-toggle-item>Button</boring-toggle-item>
+			</boring-toggle-group>
+			<boring-toggle-group type="default">
+				<boring-toggle-item>Button</boring-toggle-item>
+				<boring-toggle-item>Button</boring-toggle-item>
+				<boring-toggle-item>Button</boring-toggle-item>
+			</boring-toggle-group>
+		</section>
+
+		<span class="sectionHeader">
+			<h2>Panels</h2>
+		</span>
+		<span>
+			<h4>Card</h4>
+		</span>
+		<section id="cardContainer">
+			<boring-card id="card">
+				<h3>This is a boring card.</h3>
+			</boring-card>
+		</section>
+		<span>
+			<h4>
+				Modal
+				<boring-button type="ghost" id="addModal">+</boring-button>
+			</h4>
+		</span>
+		<section id="cardContainer" class="modalContainer">
+			<boring-modal id="modal">
+				<div slot="header">
+					<h2>Modal Title</h2>
+				</div>
+				<div slot="body">
+					<p>This is the body of the modal.</p>
+				</div>
+				<div slot="footer">
+					<boring-button type="default">OK</boring-button>
+					<boring-button type="secondary">Cancel</boring-button>
+				</div>
+			</boring-modal>
+		</section>
+
+		<span class="sectionHeader">
+			<h2>Inputs</h2>
+		</span>
+		<span>
+			<h4>Checkbox</h4>
+		</span>
+		<div class="checkbox-group">
+			<boring-checkbox>Checkbox 1</boring-checkbox>
+			<boring-checkbox>Checkbox 2</boring-checkbox>
+			<boring-checkbox>Checkbox 3</boring-checkbox>
+		</div>
+		<span>
+			<h4>Radio Button</h4>
+		</span>
+		<div class="checkbox-group">
+			<boring-radio-group>
+				<boring-radio>Radio Button 1</boring-radio>
+				<boring-radio>Radio Button 2</boring-radio>
+				<boring-radio>Radio Button 3</boring-radio>
+			</boring-radio-group>
+		</div>
+		<span>
+			<h4>Textbox</h4>
+		</span>
+		<div class="textbox-group">
+			<boring-textbox label="Textbox">Enter Text Here</boring-textbox>
+		</div>
+
+		<footer></footer>
+		<script type="module">
+			const modalGenerator = document.getElementById("addModal");
+			const modalContainer =
+				document.getElementsByClassName("modalContainer")[0];
+			let modalCount = 1;
+
+			modalGenerator.addEventListener("click", () => {
+				const modalTemplate = document.createElement("boring-modal");
+				modalTemplate.id = "modal" + modalCount;
+				modalCount++;
+				modalTemplate.setAttribute("modalSize", "small");
+				modalTemplate.innerHTML = `
+				<div slot="header">
+					<h3>Modal Title</h3>
+				</div>
+				<div slot="body">
+					<p>This is the body of the modal.</p>
+				</div>
+				<div slot="footer">
+					<boring-button type="default">OK</boring-button>
+					<boring-button type="secondary">Cancel</boring-button>
+				</div>
+				`;
+
+				modalContainer.appendChild(modalTemplate);
+			});
+		</script>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
