@@ -27,7 +27,7 @@ export class BoringButton extends HTMLElement {
             padding: 0.5rem 1rem;
             border: none;
             cursor: pointer;
-
+            width: 100%;
             border-radius: ${designTokens.borderRadius.button};
             font-family: ${designTokens.text.fontFamily.family};
             font-weight: ${designTokens.text.fontWeight.Regular};

@@ -1,5 +1,5 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -29,96 +29,22 @@ h4 {
 	font-weight: 200;
 	color: #4d11f3;
 }
-span {
+header {
 	text-align: center;
 }
-header {
-	display: flex;
-	width: 100vw;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 
-	margin-bottom: 10vh;
-}
-
-header h1 {
-	margin: 0;
-}
-
-header h1 span {
-	font-weight: 300;
-	color: #4d11f3;
-}
-
-span h2 {
-	font-weight: 700;
-}
-.sectionHeader {
-	display: block;
-	margin-top: 25vh;
-}
-
-#buttonDisplay {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	max-width: 900px;
-	gap: 25px;
-	margin: 0 auto;
-	margin-bottom: 10vh;
-}
-#buttonDisplay * {
-	justify-self: center;
-	align-self: center;
-}
-
-#toggleDisplay {
-	display: flex;
-	width: 100vw;
-	justify-content: center;
-	align-items: center;
-	gap: 15px;
-}
-
-#cardContainer {
-	display: flex;
-	max-width: 1080px;
-	margin: 0 auto;
-	justify-content: center;
-	align-items: center;
-}
-.modalContainer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
-	max-width: 75vw;
-}
-
-#card {
+.rp-login {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 50px;
-	padding: 1rem;
-}
-
-#modal h2 {
-	font-size: medium;
-}
-
-.checkbox-group {
-	display: flex;
-	justify-content: center;
 	align-items: center;
+
 	gap: 15px;
 }
-.textbox-group {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 720px;
-	margin: 0 auto;
+
+.rp-login-buttonContainer boring-button {
+	width: 200px;
+	margin-top: 75px;
 }
 footer {
 	display: flex;

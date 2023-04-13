@@ -4,10 +4,10 @@ import { colorPalette } from "./colors";
 export const designTokens: IDesignTokens = {
 	backgroundColor: {
 		default: {
-			primary: colorPalette.purple.normal,
-			secondary: colorPalette.purple.shaded,
-			tertiary: colorPalette.purple.dark,
-			disabled: colorPalette.purple.light,
+			primary: colorPalette.green.normal,
+			secondary: colorPalette.green.shaded,
+			tertiary: colorPalette.green.dark,
+			disabled: colorPalette.green.light,
 		},
 		secondary: {
 			primary: "transparent",
@@ -40,7 +40,7 @@ export const designTokens: IDesignTokens = {
 	},
 
 	text: {
-		fontFamily: { family: "Inter" },
+		fontFamily: { family: "Roboto" },
 		fontWeight: {
 			Thin: 100,
 			ExtraLight: 200,
