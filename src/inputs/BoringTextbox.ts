@@ -71,7 +71,6 @@ export class BoringTextbox extends HTMLElement {
         <label><slot></slot></label>
         <div class="wrapper">
             <input type="text" placeholder="">
-            <boring-button type="ghost" class="clear-button" aria-label="Clear">&times;</boring-button>
         </div>
         `;
 

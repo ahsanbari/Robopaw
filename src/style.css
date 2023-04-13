@@ -34,7 +34,10 @@ h4 {
 	color: #4d11f3;
 }
 header {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
 }
 
 .rp-login {
