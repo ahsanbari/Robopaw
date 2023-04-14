@@ -52,7 +52,7 @@ export const colorPalette = {
 		lighter: "#d1f0c9",
 		light: "#bbf3ca",
 		medium: "#5bb466",
-		normal: "#1eab44",
+		normal: "#a6c48a",
 		shaded: "#136c2d",
 		dark: "#115f26",
 		darker: "#0a3815",

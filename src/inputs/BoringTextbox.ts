@@ -53,20 +53,6 @@ export class BoringTextbox extends HTMLElement {
                 transition: ${designTokens.transition.transitionSpeed.fast};
             }
 
-            .clear-button {
-                display: inline-block;
-                position: absolute;
-                right: 30px;
-                background-color: transparent;
-                vertical-align: middle;
-                cursor: pointer;
-
-                transition: ${designTokens.transition.transitionSpeed.fast};
-            }
-
-            .clear-button:focus {
-                outline: none;
-            }
         </style>
         <label><slot></slot></label>
         <div class="wrapper">
